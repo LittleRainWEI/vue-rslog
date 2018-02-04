@@ -2,7 +2,7 @@
     <div class="login">
         <div :class="wrapper">
             <div class="container">
-                <h1>RSLog</h1>
+                <h1>拍拍二手降级管理平台</h1>
                 <form class="form" v-if="isShow" :model="loginForm" ref="loginForm">
                     <input v-model="loginForm.username" type="text" placeholder="用户名">
                     <input v-model="loginForm.password" type="password" placeholder="密码">
@@ -27,7 +27,7 @@ export default {
             isShow: true,
             loginForm: {
                 username: 'admin',
-                password: 'runstone'
+                password: 'admin'
             },
             bubbles: new Array(10)
         }
@@ -93,6 +93,8 @@ export default {
     background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
     opacity: 0.8;
     position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -107,7 +109,7 @@ export default {
 .container {
     width: 600px;
     height: 600px;
-    margin: -300px 0 0 -300px;
+    margin: -250px 0 0 -300px;
     padding: 80px 0;
     text-align: center;
     position: absolute;

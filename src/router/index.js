@@ -48,5 +48,16 @@ export const asyncRouterMap = [
       { path: '404', component: _import('errorPage/Error404'), name: '404' }
     ]
   },
+  {
+    path: '/charts',
+    component: Layout,
+    redirect: 'noredirect',
+    name: '图',
+    icon: 'picture',
+    meta: { role: ['admin'] },
+    children: [
+      { path: 'linechart', component: _import('charts/LineChart'), name: '折线图', meta: { role: ['admin'] }, },
+    ]
+  },
   { path: '*', redirect: '/404', hidden: true }
 ]
